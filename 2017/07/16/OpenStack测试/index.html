@@ -90,15 +90,19 @@
 
 
 
-<meta name="description" content="Knowledge is power but only wisdom is liberty">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Learn and Think">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="[TOC] 1. 测试类别简介以neutron项目为例： 单元测试Neutron中的单元测试路径为neutron/tests/unit。单元测试，也就是经常说的最小测试，它强调隔离，也就是说我们只将精力集中在我们要测试的方法内，如果该方法调用了其他方法，都可以通过Mock方式来模拟返回一些假设的值; 需要测试代码不和数据库、文件系统交互，也不能和网络进行通信。 功能测试neutron中的代码位于：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenStack测试">
+<meta property="og:url" content="http://yoursite.com/2017/07/16/OpenStack测试/index.html">
 <meta property="og:site_name" content="Learn and Think">
-<meta property="og:description" content="Knowledge is power but only wisdom is liberty">
+<meta property="og:description" content="[TOC] 1. 测试类别简介以neutron项目为例： 单元测试Neutron中的单元测试路径为neutron/tests/unit。单元测试，也就是经常说的最小测试，它强调隔离，也就是说我们只将精力集中在我们要测试的方法内，如果该方法调用了其他方法，都可以通过Mock方式来模拟返回一些假设的值; 需要测试代码不和数据库、文件系统交互，也不能和网络进行通信。 功能测试neutron中的代码位于：">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5103874-c519013432d0eab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5103874-6bd0e67991b83c48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-07-16T15:31:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learn and Think">
-<meta name="twitter:description" content="Knowledge is power but only wisdom is liberty">
+<meta name="twitter:title" content="OpenStack测试">
+<meta name="twitter:description" content="[TOC] 1. 测试类别简介以neutron项目为例： 单元测试Neutron中的单元测试路径为neutron/tests/unit。单元测试，也就是经常说的最小测试，它强调隔离，也就是说我们只将精力集中在我们要测试的方法内，如果该方法调用了其他方法，都可以通过Mock方式来模拟返回一些假设的值; 需要测试代码不和数据库、文件系统交互，也不能和网络进行通信。 功能测试neutron中的代码位于：">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/5103874-c519013432d0eab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/16/OpenStack测试/"/>
 
 
 
 
 
-  <title>Learn and Think</title>
+  <title>OpenStack测试 | Learn and Think</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/16/OpenStack测试/" itemprop="url">OpenStack测试</a></h1>
+          <h1 class="post-title" itemprop="name headline">OpenStack测试</h1>
         
 
         <div class="post-meta">
@@ -319,9 +319,7 @@
       
 
       
-        
-          
-            <p>[TOC]</p>
+        <p>[TOC]</p>
 <h2 id="1-测试类别简介"><a href="#1-测试类别简介" class="headerlink" title="1. 测试类别简介"></a>1. 测试类别简介</h2><p>以neutron项目为例：<br><img src="http://upload-images.jianshu.io/upload_images/5103874-c519013432d0eab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>Neutron中的单元测试路径为neutron/tests/unit。单元测试，也就是经常说的最小测试，它强调隔离，也就是说我们只将精力集中在我们要测试的方法内，如果该方法调用了其他方法，都可以通过Mock方式来模拟返回一些假设的值; 需要测试代码不和数据库、文件系统交互，也不能和网络进行通信。</p>
 <h3 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h3><p>neutron中的代码位于：$neutron/tests/functional, 运行时添加OS_SUDO_TESTING=True.  尽量在真实环境中辅以少量的mock串起来测试。</p>
@@ -346,20 +344,27 @@
 <h3 id="代码主要结构"><a href="#代码主要结构" class="headerlink" title="代码主要结构"></a>代码主要结构</h3><p>api  &lt;– API的测试集<br>common &lt;– 一些公共的工具类和函数<br>hacking   &lt;– 用于代码风格检测，如 pep8等<br>scenario &lt;– 对OpenStack的常用场景进行测试，包括基本的启动VM，挂载volumn和网络配置等<br>services   &lt;– tempest自己实现的OpenStack API Client，自己实现是为了不让一些bug隐藏在官方实现的Client里面。<br>test_discover &lt;–继承unittest，从api等处查找用例<br> tests      &lt;–针对tempest代码本身的单元测试</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.sdnlab.com/15548.html" target="_blank" rel="external">OpenStack Neutron之持续测试</a><br><a href="http://www.10tiao.com/html/625/201704/2652502581/1.html" target="_blank" rel="external">企业环境下的OpenStack自动化功能测试</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -367,134 +372,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/kaipian/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Han">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Learn and Think">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/kaipian/" itemprop="url">为什么开博客</a></h1>
-        
+      
 
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T22:40:00+08:00">
-                2017-05-07
-              </time>
+              <a href="/2017/05/07/kaipian/" rel="next" title="为什么开博客">
+                <i class="fa fa-chevron-left"></i> 为什么开博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="教是最好的学习方式"><a href="#教是最好的学习方式" class="headerlink" title="教是最好的学习方式"></a>教是最好的学习方式</h2><p>通过写来想明白你一些东西</p>
-<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><p>把很多东西记录下来</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -502,6 +411,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -521,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -566,6 +488,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-测试类别简介"><span class="nav-number">1.</span> <span class="nav-text">1. 测试类别简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能测试"><span class="nav-number">1.2.</span> <span class="nav-text">功能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成测试"><span class="nav-number">1.3.</span> <span class="nav-text">集成测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它"><span class="nav-number">1.4.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-tempest"><span class="nav-number">2.</span> <span class="nav-text">2. tempest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码主要结构"><span class="nav-number">2.2.</span> <span class="nav-text">代码主要结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -679,6 +617,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
