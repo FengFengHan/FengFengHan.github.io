@@ -321,12 +321,12 @@
       
         
           
-            <h2 id="1-测试类别简介"><a href="#1-测试类别简介" class="headerlink" title="1. 测试类别简介"></a>1. 测试类别简介</h2><p>以neutron项目为例：<br><img src="http://upload-images.jianshu.io/upload_images/5103874-c519013432d0eab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+            <h2 id="测试类别简介"><a href="#测试类别简介" class="headerlink" title="测试类别简介"></a>测试类别简介</h2><p>以neutron项目为例：<br><img src="http://upload-images.jianshu.io/upload_images/5103874-c519013432d0eab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>Neutron中的单元测试路径为neutron/tests/unit。单元测试，也就是经常说的最小测试，它强调隔离，也就是说我们只将精力集中在我们要测试的方法内，如果该方法调用了其他方法，都可以通过Mock方式来模拟返回一些假设的值; 需要测试代码不和数据库、文件系统交互，也不能和网络进行通信。</p>
 <h3 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h3><p>neutron中的代码位于：$neutron/tests/functional, 运行时添加OS_SUDO_TESTING=True.  尽量在真实环境中辅以少量的mock串起来测试。</p>
 <h3 id="集成测试"><a href="#集成测试" class="headerlink" title="集成测试"></a>集成测试</h3><p>在真实环境中将多个API串起来测试，即tempest项目。</p>
 <h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p><img src="http://upload-images.jianshu.io/upload_images/5103874-6bd0e67991b83c48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h2 id="2-tempest"><a href="#2-tempest" class="headerlink" title="2. tempest"></a>2. tempest</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<h2 id="tempest"><a href="#tempest" class="headerlink" title="tempest"></a>tempest</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li><p>Tempest可以自动寻找，执行测试：自动查找当前目录下所有以[Tt]est开头的Python源文件，并且按此规则递归查找子目录；所有以[Tt]est开头的Python源文件里所有以[Tt]est开头的function和class，以及继承自unittest.TestCase的class(不需要以[Tt]est开头)都会被执行。</p>
 </li>
 <li><p>Tempest可以指定文件、模块、函数进行测试。</p>
